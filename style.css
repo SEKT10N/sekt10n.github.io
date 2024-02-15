@@ -17,3 +17,33 @@ section {
     margin: 2em auto;
     padding: 0 1em;
 }
+#github-repos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#github-repos ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#github-repos li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#github-repos a {
+    text-decoration: none;
+    color: #0366d6; /* GitHub's link color */
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 1px solid #0366d6;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#github-repos a:hover,
+#github-repos a:focus {
+    background-color: #0366d6;
+    color: #ffffff;
+}
