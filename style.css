@@ -7,7 +7,7 @@ body {
 }
 
 section {
-    padding: 40px 20px;
+    padding: 20px 10px; /* Reduced padding for mobile */
     text-align: center;
     transition: background-color 0.3s linear;
 }
@@ -25,13 +25,13 @@ section {
 }
 
 h1, h2 {
-	font-size: 2em;
+    font-size: 1.5em; /* Reduced font size for mobile */
     color: #ffffff;
 }
 
 p {
-	font-size: 1.2em;
-	line-height: 1.5em;
+    font-size: 1em; /* Adjusted for readability on mobile */
+    line-height: 1.5em;
 }
 
 a {
@@ -43,51 +43,76 @@ a {
 a:hover {
     color: #e0e0e0;
 }
+
 #projects {
-    display: flex; /* Enables flexbox layout */
-    justify-content: space-between; /* Distributes space between the child elements */
-    padding: 20px; /* Adds some padding around the content */
+    display: block; /* Stack project lists on mobile */
+    padding: 20px;
 }
 
 .project-list {
-    width: 33%; /* Assigns width to each list to ensure they fit in the row */
-    text-align: center; /* Centers the text of each list's heading and items */
+    width: auto; /* Allow full width on mobile */
+    text-align: center;
+    margin-bottom: 20px; /* Add space between stacked lists */
 }
 
 .project-list ul {
-    list-style-type: none; /* Removes default list styling */
-    padding: 0; /* Removes default padding */
+    list-style-type: none;
+    padding: 0;
 }
 
 .project-list li {
-    text-align: left; /* Aligns list items to the left */
-    margin-bottom: 10px; /* Adds space between list items */
-	text-align: center;
+    text-align: center; /* Center-align list items on mobile */
+    margin-bottom: 10px;
 }
 
 .project-list a {
-    text-decoration: none;
-    color: #bdbdbd; /* Adjust color to match your theme */
-    transition: color 0.3s ease;
-	margin-left: 1rem;
-}
-
-.project-list a:hover {
-    color: #e0e0e0; /* Adjust hover color to match your theme */
+    display: inline-block; /* Make links easier to tap */
+    margin-left: 0; /* Remove left margin on mobile */
+    padding: 5px; /* Add padding for easier tapping */
 }
 
 #bottom a {
-	padding: 1em;
-	margin: 0;
-    text-decoration: none;
-    color: #bdbdbd; /* Or any color that matches your theme */
-    transition: color 0.3s ease;
-}
-
-#bottom a:hover {
-    color: #e0e0e0; /* Lighter color on hover for visual feedback */
+    padding: 10px; /* Increase padding for easier tapping */
+    display: inline-block; /* Ensure proper spacing and tap area */
 }
 
 #bottom i {
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 2em;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    #projects {
+        display: flex; /* Re-enable flexbox layout for wider screens */
+        justify-content: space-between;
+    }
+
+    .project-list {
+        width: 33%; /* Restore fixed width for project lists */
+    }
+
+    .project-list li {
+        text-align: center;
+    }
+
+    .project-list a {
+        margin-left: 0.5rem; /* Restore left margin for links */
+        padding: 0; /* Remove additional padding */
+    }
+
+    #bottom a {
+        padding: 1em;
+        margin: 0;
+    }
 }
